@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media quer </title>
+
+    <style>
+        .box{
+            background-color: rgb(41, 165, 78);
+            color: black;
+            font-size: 52px;
+            text-align: center;
+            display: none;
+            /* removes every content but reserves the space thats occupied  */
+
+        }
+
+        /* why will we want to add media query -> 
+        so when we alter repsonsiveness through inspect we can add some particular
+        css respective to that  */
+
+        /* /css added - onli for responsive  */
+        /* tells when max width beomes 500 px then add this css
+        property */
+
+        /* max width nd min width tells the maximum and minimum width */
+        @media ( max-width:500px) and (min-width:300px)
+        {
+
+            #box2{
+                display:block;
+                background-color: aqua;
+                /* display the box1/div  block only  */
+                /* since this css attribute is only for box1 */
+
+            }
+
+            #box3{
+                display: block;
+            }
+            
+        }
+
+
+        /* media type in css - google - w3 school */
+        /*  @media only screen */
+        /* supports only screen media type  */
+        
+          
+    </style>
+</head>
+
+<!-- jab screen ki size choti hjaye so theres
+     some specific css which would be added onto the code  -->
+
+
+
+<body>
+   
+
+    <div class="box" id="box1"> iphone iphone </div>
+    <div class="box" id="box2"> Samsung </div>
+    <div class="box" id="box3"> Huawei </div>
+    <div class="box" id="box4"> One PLus </div>
+    <!-- it wont show coz its restricted to responsiveness in media queries  -->
+    
+</body>
+</html>

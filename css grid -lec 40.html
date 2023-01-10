@@ -1,0 +1,81 @@
+<!-- how to design a grid like we have for youtube ,  mune -> youtube icon -> search bar
+-> icons / buttons  ---- a grid -->
+
+
+<!-- CSS GRIDS -> LEC 40 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> css grid </title>
+    <style>
+
+        .cont{
+            /* grid intialized - > 2D layout would now be renderd  */
+            /* cont -> grid 
+            the items inside grid -> grid items  */
+
+            display: grid;
+
+
+            grid-template-columns: 300px 100px 100px;
+            /* pehla col ki width width 300 - dusre ki 100 - teesre ki 100 */
+            /* since 100 width here and 100 actual width of item
+            matches therefore the columnw would get combined -> can be changed  */
+
+
+            /* likewise  */
+            /* grid-template-columns: 300px 200px auto ;
+             */
+
+
+            grid-template-columns: 1fr 4fr 1fr ;
+             /*this shows of the total width of the screen -- col 1 would cover 1 ratio 
+             likewise of column 3 -- whereas col 2 wuld cover x4 ratio of part 1   */
+
+
+         
+            /* FOR MORE ITEMS THAN 3 or 4   */
+            grid-template-columns: repeat(10, auto);
+            /* repeat col 10 times-> with width auto  */
+            grid-template-columns: repeat(3, auto);
+
+
+            grid-gap: 2rem;
+            /* gap bwteer the rows   */
+            /* the column gap wud remain the same  */
+
+
+
+
+        }
+
+        .item{
+            height: 100px;
+            /* width: 100px; */
+            background-color: blanchedalmond;
+            margin: 3px;
+            padding: 14px 6px;
+            border: 2px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div class="item"> This is item-1</div>
+        <div class="item"> This is item-2</div>
+        <div class="item"> This is item-3</div>
+        <div class="item"> This is item-4</div>
+        <div class="item"> This is item-5</div>
+        <div class="item"> This is item-6</div>
+        <div class="item"> This is item-7</div>
+        <div class="item"> This is item-8</div>
+        <div class="item"> This is item-9</div>
+    </div>
+    
+</body>
+</html>

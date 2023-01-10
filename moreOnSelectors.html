@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h1{
+            background-color: aqua;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* div ke andr walay paragrahs */
+        div p {
+            color: yellow;
+            font-weight: bold;
+            background-color: bisque;
+
+        }
+
+        /* div ke andr li ke andr li ke andr p ko effect krgei  */
+        div li p {
+            background-color: magenta;
+
+        }
+
+
+        /* if you want to put css on such an element jiska
+        pichla element div ho --  */
+        /* if p is right after div--- the very next sibling */
+        div + p {
+            color: aliceblue;
+            background-color: red;
+        }
+        /* pichla sibling div  */
+
+
+    </style>
+</head>
+
+
+<body>
+    
+    
+    <h1> This is more on selectors </h1>    
+    <div class="cont">
+        <div class="row">
+            
+            <ul>
+                <li class="item"><p>Another para inside li </p></li>
+                
+            </ul>
+
+            <p> This is a paragraph </p>
+        </div>
+        <p> This is second paragraph</p>
+    </div>
+    <p> This is third paragraph </p>
+
+
+
+
+
+
+
+
+</body>
+</html>

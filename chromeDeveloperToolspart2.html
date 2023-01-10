@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content=" tihs is description">
+    <meta name="keywords" content="html, css , js , web development">
+    <meta name="robots" content="INDEX,FOLLOW">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CSS </title>
+
+    <style>
+        /* class ke liye */
+        .container
+        {
+            border: 2px solid red;
+            background-color: rgb(223, 245,201);
+            padding: 34px;
+            margin:34px auto;
+            width:666px;
+
+        }
+
+        /*  jab cursor hover kre uspe to color green hojayega  */
+        a:hover{
+           
+            color: rgb(29, 230, 213);
+            background-color: blanchedalmond;
+        }
+
+
+         /* link  me jo line arhi wo hatjaygi  */
+        a{
+            text-decoration: none;
+            /* no tetx kining or underlining ! */
+            color: black;
+        }
+
+
+        .btn{
+            background-color: cadetblue;
+            padding:6px;
+            border:1px solid black;
+            cursor:pointer;
+            font-size: 18px;
+            border-radius: 4px;
+        }
+
+
+        /* therefore the following link would open which is present in href anchor */
+        /* stlying of that */
+        /* if visited that linked before */
+        a:visited{
+            color: chartreuse;
+
+        }
+
+        /* change of background color when clicked  */
+        a:active{
+            background-color: blue;
+        }
+
+
+
+
+        /* Navigation Menu   */
+        #ty{
+            border: 2px solid blue;
+            color: mediumturquoise;
+            padding:34px;
+            width:466px;
+            margin: auto;
+            background-color: black;
+        }
+
+        .navbar
+        {
+            background-color: burlywood;
+            border-radius: 30px;
+        }
+
+        .navbar li
+        {
+            float:left;
+
+            /* removing bullets  */
+            /* background color remove hojayega so how to counter dat,,, overflow hojayega    */
+            list-style: none;
+            margin: 20px 15px;
+
+
+
+
+
+        }
+
+
+        .navbar li a 
+        {
+            text-decoration: none;
+            padding: 3px 3px;
+            color: rgb(0, 2, 0);
+            font-size: larger;
+            
+        }
+
+        .navbar ul{
+            overflow: auto;
+            /* to counter backgrund , takay wapis ajaye , over flow na ho */
+        }
+
+        .search{
+            float:right;
+            color: rgb(8, 7, 6);
+            padding:24px 58px;
+
+        }
+
+        .navbar input{
+            border: 2px solid black;
+            border-radius: 15px;
+            padding:3px;
+
+        }
+
+
+        /* if someone hovers over li a  */
+        .navbar li a:hover{
+            color: brown;
+            background-color: burlywood;
+        }
+
+
+        /* display property  */
+        #dsp
+        {
+            border: 2px solid black;
+            padding: 29px;
+            width: 466px;
+            background-color: rgb(20, 238, 172);
+            margin: auto;
+        }
+
+        img{
+            width: 34px;
+            margin: auto;
+            display: block;
+
+
+        }
+
+        .top h3{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin:0px;
+            text-align: center;
+            
+
+        }
+
+        .top{
+            margin:auto;
+            border: 4px solid red;
+            
+            /* helps in centering the header */
+            margin: auto;
+            width:1200px;
+
+            /* width:15%; */
+
+
+        }
+
+        .cont{
+            width:1200px;
+            margin:auto;
+            
+            /* centre hojayega khud ba khud is  also thus reponsive  */
+        }
+        *{
+            box-sizing: border-box;
+        }
+        .box{
+            border: 4px solid black;
+            background-color: grey;
+            margin:4px 0px;
+            padding:23px;
+            display:block;
+            /* would display the divs as a block now with width set below */
+            width:29%;
+            display: inline-block;
+
+        }
+
+
+
+        /* positioning in css --- lecture 25*/
+        .boxy{
+            border: 2px solid red;
+            width:150px;
+            height:150px;
+            /* display innline bloack -- agr ek he lin lagana ho */
+            margin:2px;
+            display: inline-block;
+            /* ek he line me sary blocks ajaynga  */
+            
+
+
+        }
+
+        #boxy3{
+            /* position: static;
+            wont cause any change since psoition set by default is alwyas static  */
+
+
+            /* position: relative;
+            top: 34px;
+            left: 34px; */
+
+
+
+            /* there are 4 types of psoitons  */
+            /*  position : absolute, relative , fixed , sticky   */
+            
+            /*  relative :- u can use top bottom left right properties  */
+            /* relative to its normal position ustrff se hilega  */
+            /*  therefore u can use top bottom left right - to move your box in whichever directiomn you want  */
+            /* foreg if top 34px - its gnna move uparse from its original position */
+            /* ----------------------------- */
+            /* position: absolute; */
+            /* left: 134px; */
+
+            /* move krega relative to the eparent  */
+            /* and in this case its paretn is the container  */
+            /*  to uske andr he move krega  */
+
+            /* ------------------- */
+            /*  psoiton sticky - used when we scroll to wo box ek jaga chpka ka chipka he rehjaye  */
+
+            /* positon fixed is when we scroll to wo fixed he rahegs spns positon pe  */
+            position: fixed;
+            right: 2px;
+            bottom:2px;
+            /*  therefore if you notice when we scroll down teh box is fixed at that particular osition and doesnt move  */
+            /*  can inspect and set some perfect position  */
+
+            
+
+
+        }
+
+        #boxy1{
+
+            /* position sticky- scroll kr kr ke upar jak chipak ajye aur hila nahi   */
+
+            position: sticky;
+            top:3px;
+            /* agar top boley toh upar he chipak jaygea like a menu should - likewise similar with bottom left right !  */
+            /*  kam ayegi ek menu bananay men ! */
+            
+
+        }
+
+        .conty{
+            border: 2px solid rgb(10, 10, 10);
+            background-color: burlywood;
+            height: 3444px;
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+
+</head>
+
+<body>
+    <div class="container" id="cont">
+        <h3> Styling links anf buttons </h3>
+        <p> hhehhehehehehehh os what hxEauvDUWZDw0PFSPWsbivZ</p>
+
+        <!-- anchor -->
+        <a href="https://www.youtube.com/watch?v=3lAl7RNqp1c&list=PLu0W_9lII9agiCUZYRsvtGTXdxkzPyItg&index=22" class="btn"> Read More </a>
+        <!-- would visit the followin link  -->
+
+
+        <button class="btn" > Contact us </button>
+
+    </div>
+
+
+
+
+
+
+
+
+        <!-- Navigation Menu  -->
+    <h3 id="ty"> NAVIGATION MENU </h3>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home </a> </li>
+                <li><a href="#">About</a>  </li>
+                <li><a href="#">services</a>  </li>
+                <li><a href="#">Contacts</a>  </li>
+            
+                <div class="search">
+                    <input type="text" name="saerch" id="search" placeholder="search this website ">
+
+                </div>
+            </ul>
+
+        </nav>
+    </header>
+
+
+
+    <!-- display property -->
+    <h3 id="dsp"> DISPLAY PROPERTY</h3>
+
+
+    <!-- header a block element jo puri space leta he  -->
+    <header class="top">
+        <img src="data:image/jpeg;base64,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" alt="">
+
+        <h3> Welcome to my Blog </h3>
+
+    </header>
+    <!-- we can set headers width to 50% or 15 coz its a block element to cnter it while margin auto thus centre hojayega  -->
+    <div class="cont">
+        <div class="box">
+            <h4 class="heading"> HEADING  </h4>
+            <p> LL7N8rnv5II2bnkv3RrDXEdsxZWw5tMQ0fXbxWdic
+                U95yi55QUFo1GUhDGjqefadSg4d9SsZFmz7R9w5qeH2dl
+                3qhn93gPdKLVxY0A gaae</p>
+        </div>
+        <div class="box">
+            <h4 class="heading"> HEADING  </h4>
+            <p> LL7N8rnv5II2bnkv3RrDXEdsxZWw5tMQ0fXbxWdicU95y
+                55QUFo1GUhDGjqefadSg4d9SsZFmz7R9w5qeH2dl3qhn93
+                gPdKLVxY0Agaae</p>
+        </div>
+        <div class="box">
+            <h4 class="heading"> HEADING  </h4>
+            <p> LL7N8rnv5II2bnkv3RrDXEdsxZWw5tMQ0fXbxWdicU9
+                5yi55QU Fo1GUhDGjqefadSg4d9SsZFmz7R9w5qeH2dl
+                3qhn93gPdKLVxY0Agaae</p>
+        </div>
+    </div>
+
+
+
+    <!-- positioniong in css [imp]-->
+    <!-- position absolute, relative , fixed and sticky -->
+
+    <h3 id="dsp"> POSITIONING IN CSS </h3>
+
+    <div class="conty">
+        <div class="boxy" id="boxy1"> 1 </div>
+        <div class="boxy" id="boxy2"> 2 </div>
+        <div class="boxy" id="boxy3"> chat with us  </div>
+        <div class="boxy" id="boxy4"> 4 </div>
+
+    </div>
+    
+
+
+
+
+    
+</body>
+</html>
+
+
+
+
+<!-- for further inquiry learn bootstrap -->

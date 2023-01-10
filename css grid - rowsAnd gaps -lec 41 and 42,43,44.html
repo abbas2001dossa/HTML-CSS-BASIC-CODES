@@ -1,0 +1,323 @@
+<!--  CSS Grid: Creating Rows & Gaps in Grid | Web Development Tutorials #41
+ -->
+<!-- CSS Grid: Spanning Multiple Rows and Columns in Grid | Web Development Tutorials #42
+ -->
+
+<!-- CSS Grid: Autofit & MinMax | Web Development Tutorials #43
+  -->
+ 
+<!-- CSS Grid: Creating Layouts Using Grid Template Area | Web Development Tutorials #44 -->
+  
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid {
+            display: grid;
+
+            /* telling about rows  */
+            grid-template-rows: 1fr 1fr 4fr;
+            /* The 1fr stands for the first row - while teh 4 fr for the crresponding thrid row  */
+
+            grid-auto-rows: 2fr;
+            /* shro me 1fr 1fr 4fr men -> uske ba 3 fr me bat jayega  */
+            /* universally would set 3frs for every row  */
+
+
+            /* defining rows and cols  */
+            grid-template-columns: 1fr 4fr;
+            /* only two cols */
+
+            grid-gap: 1rem;
+            /* between al the grid items  */
+
+
+
+        }
+
+        .box {
+            background-color: burlywood;
+            border: 2px solid black;
+
+        }
+
+
+
+        /* LEC - 42  */
+        /* SPANNING IN GRID  */
+
+        .container{
+            display: grid;
+            /* grid-template-columns: 1fr 3fr 3fr; */
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows: repeat(4,1fr);
+            grid-row-gap: 1rem;
+            grid-column-gap: 3rem;
+            color: whitesmoke;
+            grid-gap: 1rems;
+
+        }
+
+
+        .box2{
+            background-color: brown;
+            border: 3px solid rgb(22, 16, 16);
+            padding: 23px;
+
+        }
+
+        .box2:first-child{
+            /* grid-column-start: 1; */
+            /* grid-column-end: 3; */
+
+
+            /* likewise */
+            /* grid-row-start: 1; */
+            /* grid-row-end: 3; */
+
+
+
+            /* shorthand */
+            
+            /*  */
+            grid-column: 1 / span 3 ;
+            /* this means that pehli row men / 3 dabo (box )  ko apas me jordo ya span krdo ! */
+
+            /* likewise */
+            /* grid-row: 2 / span 2;  */
+
+        }
+
+
+
+
+
+
+        /* LEC - 43 ->>>  autofit and minMax  */
+        
+
+        .conttt{
+            display: grid;
+            grid-gap: 1rem;
+            /* grid-template-columns: 112px 112px 112px ; */
+            
+            
+            grid-template-columns: 1fr 1fr 1fr;
+            
+
+
+            /* to centrre the boxes  */
+            /* justify-content: center; */
+
+
+            /* to make it auto-fit */
+            /* such that when-> the website is made responsive then 
+            decreased to mobile size-> so the site could perfectly fit to
+            that display size as well */
+            grid-template-columns: repeat(auto-fit , minmax(400px , 1fr));
+            /* kamsekm sab columns ki 400px rahegi and max 1fr repeated. */
+            /* min-> 400px --- max->1fr---> thus its made responsive perfectlty and autofit feature worsk perfect as welll too !  */
+
+
+
+
+
+
+        }
+
+        .box3{
+            border: 2px solid black;
+            background-color: burlywood;
+            padding: 23px;
+            
+
+        }
+
+
+
+
+
+
+
+        /* CSS Grid: Creating Layouts Using Grid Template Area | Web Development Tutorials #44 */
+
+
+
+        .cont2{
+
+            display: grid;
+            grid-gap: 1rem;
+
+            grid-template-areas: 
+            'navbar navbar navbar navbar'
+            'section section section aside'
+            'footer footer footer footer';
+
+            /* website iske mutabiq dekhe gi -> ke ek grid hoga aur 4 columns honge 
+            navbar-> would cover enitre row 1 
+            section-> would coved 3fr whereas 1fr wuld be covered by aside             
+            */
+
+
+
+
+
+
+
+        }
+
+        .box4{
+
+            background-color: aquamarine;
+            border: 4px solid black;
+
+
+        }
+
+
+
+        #navbar{
+            grid-area: navbar;
+
+        }
+
+        #section{
+
+            grid-area: section;
+        }
+
+        #aside{
+            grid-area: aside;
+
+        }
+
+        footer{
+            grid-area: footer ;
+        }
+
+
+
+
+        
+
+
+    </style>
+</head>
+
+<body>
+    <!-- <div class="grid">
+        <div class="box"> This is box-1 </div>
+        <div class="box"> This is box-2 </div>
+        <div class="box"> This is box-3 </div>
+        <div class="box"> This is box-4 </div>
+        <div class="box"> This is box-5 </div>
+        <div class="box"> This is box-6 </div>
+        <div class="box"> This is box-7 </div>
+        <div class="box"> This is box-8 </div>
+        <div class="box"> This is box-9 </div>
+        <div class="box"> This is box-10 </div>
+
+    </div> -->
+
+
+
+
+
+
+    <!-- SPANNING IN GRID  -->
+
+
+    <!-- <div class="container">
+
+        <div class="box2"> Item 1 </div>
+        <div class="box2"> Item 2 </div>
+        <div class="box2"> Item 3 </div>
+        <div class="box2"> Item 4 </div>
+        <div class="box2"> Item 5 </div>
+        <div class="box2"> Item 6 </div>
+        <div class="box2"> Item 7 </div>
+        <div class="box2"> Item 8 </div>
+        <div class="box2"> Item 9 </div>
+        <div class="box2"> Item 10 </div>
+
+    </div> -->
+
+
+
+
+
+    <!-- CSS Grid: Autofit & MinMax | Web Development Tutorials #43
+ -->
+
+    <!-- <div class="conttt">
+        <div class="box3"> Item -1 </div>
+        <div class="box3"> Item -2 </div>
+        <div class="box3"> Item -3 </div>
+        <div class="box3"> Item -4 </div>
+        <div class="box3"> Item -5 </div>
+        <div class="box3"> Item -6 </div>
+        <div class="box3"> Item -7 </div>
+        <div class="box3"> Item -8 </div>
+        <div class="box3"> Item -9 </div>
+    </div> -->
+
+
+
+
+    <!-- CSS Grid: Creating Layouts Using Grid Template Area | Web Development Tutorials #44 -->
+
+    <!-- perfect layouts can be mdae with proper header ad footers  -->
+
+    <div class="cont2"> 
+        <div id="navbar" class="box4">
+            Home About Contact Search
+        </div>
+        <div id="section" class="box4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam perferendis vel omnis sit, maxime, voluptatibus natus doloribus, esse facere eius expedita nisi voluptatem ut officiis. Qui at nam voluptatum omnis.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea expedita magnam, et officia architecto odit eligendi fugiat quam. Explicabo culpa, impedit ratione aliquam officiis minus nobis necessitatibus. Vel, velit. Iste nemo autem nam inventore quos. Totam voluptates unde facere quos dolores illo neque nulla excepturi amet atque tenetur repudiandae sunt nemo voluptatibus natus eum iste, vero iusto dolorum. Illo rem expedita commodi amet dolore et, ex error placeat, cumque perspiciatis consequuntur quidem quo blanditiis nesciunt facilis suscipit ab. Recusandae quos debitis ullam optio eaque facilis nemo expedita impedit, dolorum modi quaerat magni sit ratione molestias accusantium saepe quod dolorem nam id mollitia ad blanditiis. Rem deleniti beatae, minima consequuntur hic saepe! Ipsam, placeat suscipit? Beatae laudantium vitae illo tenetur veritatis perferendis harum quos ut officiis placeat, quo, corrupti commodi error nesciunt, nemo consectetur consequuntur possimus saepe molestias. A fuga natus aliquid, est ipsam, sint autem repellat ipsum, hic corporis rerum animi? Ex placeat id suscipit excepturi cupiditate hic odit, ipsa sapiente laudantium dignissimos dolore eius pariatur eaque exercitationem reprehenderit. Cum incidunt quisquam adipisci ipsa mollitia molestiae voluptates, eaque, iure itaque qui iusto! Aperiam, in omnis reprehenderit ab officia, atque sapiente eveniet eos temporibus non enim iure asperiores ipsa, necessitatibus vero? Nobis ipsa magnam aliquid, omnis, enim possimus dolores qui sapiente sequi autem impedit excepturi alias. Provident beatae odit, blanditiis rerum temporibus minima impedit eius consectetur corrupti tenetur animi consequuntur ea. Nesciunt iure, obcaecati odio officiis repudiandae sit iste modi, sunt perspiciatis maxime maiores, magni sed. Quasi aspernatur dolorem voluptate sapiente non amet rem explicabo tempore, reprehenderit inventore? Voluptatibus nostrum tenetur esse architecto optio, dolorem eveniet rerum aperiam, nesciunt dolorum voluptas. Cumque repellat, accusantium aut consequatur obcaecati quaerat molestias harum deserunt voluptate labore nihil reprehenderit alias repudiandae ducimus nostrum iste beatae in corrupti soluta. Quas iste expedita reprehenderit deleniti eaque sed nostrum a corrupti? Similique possimus at laboriosam eum libero sit sunt officia et molestiae. Aperiam eaque, corporis aliquam perferendis incidunt necessitatibus aut accusamus sit recusandae quaerat omnis porro maxime modi magni. Voluptatibus facere, ratione cupiditate delectus, nisi quisquam id reprehenderit quis aut numquam ullam asperiores deleniti. Libero minima ipsum corrupti, nesciunt velit reiciendis debitis, similique id quia labore consequatur magnam atque ratione dolore nobis optio. Recusandae vero, sit obcaecati, quas aliquam doloribus debitis sed rem nulla illo rerum ipsam odio maiores ratione. Delectus quibusdam aliquam dolores maxime perspiciatis! Repudiandae et pariatur culpa minima veritatis totam! Qui corporis illum aliquid odit.
+
+        </div>
+        <div id="aside" class="box4">
+            Hello my name is Abbas Dossa. How you doing ? 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quidem libero ipsum porro, iure dolor architecto natus dolore hic maiores expedita neque nemo aperiam, totam nisi quod eveniet amet laborum vitae sit doloribus suscipit ipsam eos? Laudantium quisquam dolorem consequatur. Facere ipsam molestias sed nulla totam deleniti, omnis voluptates, dolores incidunt accusantium et porro, expedita quaerat voluptatum cupiditate nesciunt reiciendis consequuntur. Nemo eos quia officiis vel quidem sunt sed odit minus, nihil illum accusamus voluptas ipsam totam mollitia, excepturi ullam ad omnis aliquid corrupti eum doloremque sit numquam quas? Laborum illo impedit iste aperiam tempore voluptates fuga ullam, quaerat asperiores! Tempore deleniti est repellendus. Ea optio, beatae quibusdam nemo iste ex, provident repudiandae aliquid expedita commodi asperiores? Quos, nisi dolorum, impedit libero illum asperiores delectus, obcaecati ratione omnis id animi doloribus sed dicta vitae. Perferendis officia recusandae a dolorem provident dignissimos. Officia sapiente, tenetur voluptates praesentium voluptatem debitis modi, laboriosam explicabo sit ipsa iusto repudiandae aliquid possimus eaque sequi id distinctio. Commodi tempore velit eius et corporis totam voluptas non! Corporis facere commodi cum nostrum ducimus quod eaque dolore eius placeat velit autem vitae odio iste, veritatis, architecto quas quaerat est porro deleniti ipsam distinctio nesciunt corrupti. Eius, illum modi molestias nemo aliquam, tempora vel officia ex dolores sit molestiae. Assumenda quaerat perferendis, voluptatem veniam facere voluptatibus quas praesentium, ratione amet blanditiis fugiat voluptate, earum hic maiores commodi quo perspiciatis enim soluta. Consequuntur consequatur similique molestias iusto error excepturi, saepe numquam sint, iste natus cumque, nisi asperiores veniam nostrum voluptatum vitae recusandae quam sed ea porro velit maxime. Sapiente ad laudantium quaerat et doloremque rem cum quia veniam est. Officia eos perferendis fugiat laborum! Similique quod perspiciatis iure enim! Et, libero atque! Corrupti, eos aut voluptatum quisquam praesentium aliquid perferendis nostrum, vitae at earum est incidunt commodi. Et perspiciatis dolorem saepe minima aliquid. Dolores itaque dolorum culpa quasi maiores perspiciatis delectus provident? Blanditiis quidem doloremque omnis inventore ex voluptatibus vel quae ipsa laboriosam commodi, mollitia obcaecati natus aperiam atque id quibusdam ullam, officiis culpa excepturi libero modi dolor distinctio facilis! Accusantium nesciunt nam eaque dolore, pariatur eum aperiam rem quaerat aut dolorum deleniti vitae repellendus tenetur delectus, facilis atque distinctio ipsum amet numquam itaque excepturi! Ad error libero tempore quo excepturi quae cum vero nostrum dignissimos? Autem vero fuga, praesentium eius excepturi commodi temporibus officia modi eaque consectetur explicabo obcaecati incidunt fugiat sunt asperiores aliquid libero repellat? Magnam, modi? Omnis.
+
+        </div>
+        <footer class="box4">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis nihil a fuga?
+
+        </footer>
+
+
+
+
+
+        <!-- <div class="box4"> Item -1 </div>
+        <div class="box4"> Item -2 </div>
+        <div class="box4"> Item -3 </div>
+        <div class="box4"> Item -4 </div>
+        <div class="box4"> Item -5 </div>
+        <div class="box4"> Item -6 </div>
+        <div class="box4"> Item -7 </div>
+        <div class="box4"> Item -8 </div>
+        <div class="box4"> Item -9 </div>
+        <div class="box4"> Item -5 </div>
+        <div class="box4"> Item -6 </div>
+        <div class="box4"> Item -7 </div>
+        <div class="box4"> Item -8 </div> -->
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

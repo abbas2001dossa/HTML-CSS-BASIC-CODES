@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> box shadow and text shadow </title>
+
+    <style>
+
+        .cont{
+            display: flex;
+            /* since fex direction by default is row  */
+            /* therefore all those divs in .cont will be displayed in a row  */
+            /* flex-direction: row; */
+            /* by default  */
+
+
+
+
+
+
+
+        }
+        .card{
+            padding: 23px 12px;
+            margin: 23px 12px;
+            border: 2px solid rgb(10, 66, 63);
+            background-color: aquamarine;
+
+
+            /* box shadow  -- lec 34   */
+
+
+            /* box-shadow: 10px 13px rgb(102, 95, 173); */
+
+
+            /* 1px and 13px is the offset given whereas green is the shadow color 
+             */
+
+            /* first offset -> offset from right  */
+            /* seconf offseet -> offset from top  */
+            /* offset-> box ka sadow k=given length of it  */
+            /* when u put a negatiive offset -> you would get offset at bottom and left the opp
+            opposite  */
+
+
+
+
+            /* BLUR RADIUS  */
+            /* we can add another foruth argument t the box shadow -> which is the blur raidus
+            --> the blur rasdius would tell colur phel kitna raha he  */
+
+            /* syntax would be -- third argument -> blur radius  */
+            
+            /* box-shadow: 10px 13px 10px rgb(10,66,63); */
+            /* blur radius -> same case with negative  */
+
+
+            /* SPREAD RADIUS  */
+            /* fourth argument -> spread radius */
+            /* kitna pehlana chahte ho aap ek color ko  */
+            /* box-shadow: 10px 13px 10px 14px  rgb(10, 66, 63); */
+
+
+            /* INSET */
+            /* box shadow andr ki trf now due to inset  */
+            /* box-shadow: inset 10px 13px rgb(10, 66, 63); */
+
+
+            /* if you want to give multiple shadows inside one single box - syntax  */
+            box-shadow: 3px 5px rgb(10, 66, 63) , 4px 6px rgb(192, 243, 8);
+
+
+
+        }
+
+
+        /* when to use a text shadow -> suppose we have an image and the text over that cannot be seen ->
+        so to make it visible we add text shadows  */
+
+        /* TEXT SHADOW  */
+        .card h2{
+
+            /*text shadow  */
+            text-shadow: 3px 4px rgba(100, 62, 240, 0.651);
+        
+            /* blur radius */
+            text-shadow: 3px 4px 12px rgba(62, 13, 240, 0.651);
+
+        
+        
+        }
+
+
+
+
+
+
+
+
+        /* VARIABLES AND CUSTOM PROPERTIES  */
+        .box{
+            
+            /* how to make a avariable  */
+            /* agr ek jaga varaible change kroge main jagag pe
+            to hr jaga automatically variable change hojayega  */
+
+            --box-color:rgb(19, 223, 19);
+            /* to use it in global --> comment it and uncommetn global  */
+            /* scope only in .box  */
+
+            width: 200px;
+            height: 200px;
+            background-color: var(--box-color)
+        
+            ;
+            border: 2px solid red ;
+            margin: 2px 9px ;
+
+            box-shadow: 3px 3px var(--box-color);
+
+
+            
+
+
+        }
+
+
+        /* gloabal variables  */
+        :root{
+            /* --box-color:purple; */
+
+            /* primary and secondary color  */
+            --primary-color:blue;
+            --secondary:green;
+
+            /* we can put these varibale whereever we want too */
+
+            --maxw:733px;
+
+
+        }
+
+        .conty{
+            display: flex;
+            color: white;
+
+
+            max-width: var(--maxw);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div class="card" id="card1">
+            <h2> C++ course </h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dolor, ut necessitatibus accusamus quibusdam sequi id ipsum recusandae aliquid reprehenderit enim, at tempora unde consequuntur iste tenetur iure fugit mollitia.</p>
+
+        </div>
+        <div class="card" id="card2">
+            <h2> HTML course </h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa et non vero repellat provident deleniti fugiat deserunt! Aperiam deleniti, quo cum obcaecati totam voluptate nesciunt cumque ut odio eaque. Beatae?</p>
+
+        </div>
+        <div class="card" id="card3">
+            <h2> CSS course </h2>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. At accusantium quis illum incidunt exercitationem amet qui molestiae, dolorem magni, voluptatibus dolor tempore ut quaerat sint explicabo esse harum aut beatae.</p>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- VARIABLES AND CCUSTOM PROPERTIES  -->
+
+    <div>
+        <h1>
+            VAriables and custom PROPERTIES
+        </h1>
+    </div>
+
+
+    <div class="conty">
+        <div class="box"> box one  </div>
+        <div class="box"> box two </div>
+        <div class="box"> box three </div>
+    </div>
+    
+
+
+
+
+
+
+    
+</body>
+</html>

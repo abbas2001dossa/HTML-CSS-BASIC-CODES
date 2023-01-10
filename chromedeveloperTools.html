@@ -1,0 +1,471 @@
+<!--  deeveloper tools and css fonts and colors and borders and backgrounds  -->
+<!-- box model , margin , padding  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content=" tihs is description">
+    <meta name="keywords" content="html, css , js , web development">
+    <meta name="robots" content="INDEX,FOLLOW">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS </title>
+    <style>
+        /* p{
+            color: brown;
+            font-style: italic;
+            background-color: bisque;
+        } */
+
+        p{
+            /* changes the font of the text  */
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            /*  search on web website fonts -- css fonts --  */
+            /* ot can use google fonts through using styke sheet  */
+            
+            font-size: 33px;
+            /* font size is the size of the font ... 333px - to big  */
+            /*  pixel is 196th of an inch  */
+
+
+            line-height: 2.3em;
+            /* the sapace etween two fonts  */
+            /* em-> parent ka size ka dugna  */
+
+
+
+
+        }
+/* colors -------------------------------------- */
+        #one
+        {   
+            font-weight: bold;
+            /*  tells you font ka bold or how dark it be etc */
+            
+            font-style: italic; 
+            /* differetn styles whichver suits u  */
+            
+            background-color: aqua;
+
+        }
+        
+        #first{
+            color:chocolate;
+            background-color: rgb(238, 193, 14);
+            height: 100px;
+            /* before it coveered only th ehight given to it */
+            /*  after 100px -> its specified to some height the background */
+            
+
+
+            /* likewise sem thing with width  */
+            /*  predeefined width and defined  */
+            /*  defined width ->  */
+            width: 455px;
+            
+
+            border-color:black;
+            border-style: solid ;
+            /*  style of how the border can be seen  */
+            border-width: 9px;
+
+
+            border-radius: 30px;
+            /* with your border radius one cn change the hape o fthe border -- curve it like submit button  */
+            /* you an even wrwite all these in one line except radius */
+            /* like for example  */
+            /*  border: 4px solid green */
+
+
+
+
+
+
+
+
+
+            /*  px -> 1/96th of an inch  */
+        }
+
+        #second
+        {
+            color:rgb(0,255,0);
+            border-color: brown;
+            border-style: double;
+            /* another border style nd like wise there are manymore  */
+        }
+        
+        #third{
+            color: #ffff
+            ;
+            background-color: rgb(22, 223, 223);
+            /* hex colors serch from google css sheets  */
+        }
+
+
+        /* borders and backgrounds --------------------------------- */
+        #lo{
+
+            background-color: green;
+            height:100px;
+            width:455px;
+            /* border-width: 70px; */
+            /* border-radius: 100px; */
+
+            border-top: 2px solid violet;
+            /*  ----- ---- sstyle color  */
+            
+            border-right: 2px solid blue;
+            border-bottom: 2px solid green;
+            border-left: 2px solid yellow;
+            /*  to chnage border from left right bottom head  */
+
+
+            /*  if you want to change top left radius onli  */
+            border-top-left-radius: 14px;
+            border-bottom-left-radius: 14px;
+            /* border-top-right-radius: 4px; */
+            /* border-top-left-radius: 4px; */
+
+
+
+            
+
+
+        
+        
+        }
+
+        /* click arrow to open four  */
+        #four{
+
+            height:500px;
+            width:455px;
+
+            /* background image  --- type bim*/
+            /* copy image address  */
+            background-image: url('data:image/jpeg;base64,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');
+            border: 2px solid black;
+
+
+            /* when the image keeps reepating  */
+            /* do this so the image cannot repeat continuousuly  */
+            background-repeat: no-repeat;
+            /*  repeat -x and -y would let it repet on x and y axis respectively  */
+            
+            
+            
+            /* background-position:center ; */
+            background-position: 82px top;
+
+            background-position: center center;
+            /* image will be positioned in the center */
+
+            /* background-position: center right; */
+
+            /* background-position: center top; */
+            /* background-position: top left; */
+
+            /* background-position: top top; */
+
+
+
+
+
+
+
+        }
+
+
+        /* box model , margin , padding  */
+        /* box model  */
+        .container{
+            background-color: aquamarine
+            ;
+
+            margin: 35px;
+            /* margin applied from all sides but if we want we can apply it frm any one direction as well  */
+
+
+            border: 3px solid rgb(29, 3, 93);
+            /* padding: 9px;
+             */
+             /* commmenting since showing padding in differetn divs  */
+
+
+
+            
+            /* siimat jayega content thora  */
+            /*  you can compare by making two divs: with padding and without padding ... and comparing both of the content  */
+
+            /* when u increase the padding pixel wo content border ke andr he andr simata chalajayega  */
+
+
+
+
+            /* padding from any one side as you need */
+            padding-top: 24px;
+            padding-bottom: 30px;
+            /*  we can similaarly do with margins */
+            margin-top:23px;
+            margin-right: 23px;
+            /* similarly a better way to manag adding and boders everywhere is to write border left-right-bottom etc */
+            /* similarly with margin  */
+            /* since we are ding this in cntainer its only applicable where cntainer is usedd ! */
+
+
+            border-radius: 23px;
+            width:300px;
+
+            /* box sizing property-> due to which when padding takes place your width doesnt change  */
+            /* waarna if you change your padding on a bordered box its idth increases with this it wont  */
+
+            box-sizing: border-box;
+
+
+
+
+
+
+        }
+
+
+        /* universal  selector used for all the boxes  */
+        *{
+            box-sizing: border-box;
+            
+        }
+
+
+        /* we can also use css on the whole boody 
+        -can set it with inspecct  */
+        body{
+            background-color: burlywood;
+        }
+
+        
+
+        #ff1{
+            padding: 10px;
+        }
+
+        #ff2{
+            padding:20px;
+        }
+
+        #ff3{
+            padding:80px;
+            /* the paragrph present not the heading  */
+        }
+
+
+
+
+        /* how can we do allignmetn in an html page  */
+        .cont{
+            width: 900px;
+            border: 3px solid blueviolet;
+        
+
+
+            margin: auto;
+            /*automatically calculates and centres the content  */
+
+            /* if you want to change the font you cana easily do it through google fonts  */
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+            background-color: chartreuse;
+            /* box-sizing: border-box; */
+
+
+            text-align: right;
+            /*  text right pe shift hjayega  */
+
+            text-align: center;
+            /* center me shift hojaygea  */
+
+
+            /* text-align:justify */
+
+        }
+
+        .item{
+            border: 5px solid grey;
+            margin: 12px 3px;
+            padding: 12px 3px;
+            /*  x and y denoted - */
+            background-color: rgb(161, 94, 6);
+            
+        }
+
+       
+
+
+
+        /*  how can we float elements in right and left  */
+
+        #fruits{
+
+            float:left;
+            width: 45%;
+            /* can check from inspect element  */
+            
+
+        }
+
+        #computer{
+            float: left;
+            width: 45%;
+            /* clear: left; */
+            }
+
+        #stationary{
+            float: left;
+            width: 90%;
+
+            clear: left;
+            /* used when an element is overlapping on another */
+            /* clear left- koi bhi float left wala element mere upr na aye  */
+            /* clear right- koi bhi float right wla element mere upr n aye  */
+
+        }
+
+
+
+
+        /*  styling links and buttons  */
+        
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+
+</head>
+
+<body>
+    <h4> DEVELOPER TOOLS</h4>
+    <p> THis is tutptorial for developer tools ! </p>
+
+
+    <!-- css fonts  -->
+    <h3> CSS FONTS</h3>
+    <p> lets play wih fonts !! </p>
+    <span id="one"> holy moly </span>
+    <span> dudez </span>
+
+
+    <h3> COLORS IN CSS</h3>
+    <p id="first"> This is a paragraph from teh first kine </p>
+    <p id="second"> This is teh second paragrpah hehe</p>
+    <p id="third"> This is teh second paragrpah hehe</p>
+
+    <p id="lo"> This is Abbas Dossa checking in </p>
+    <p id ="four"> HEHE dudez how you doing ! </p>
+
+
+
+    <!-- box model  -->
+    <!-- a box telling the diagram of  -->
+    <!--  pehla padding phir border phir margin you can find isme agr margin padding dalay to wo kesa accept kregi  -->
+
+    <!-- remember : border ke andr padding present he:- toh with the help of padding content simat jaygea   -->
+
+
+    <!--  -->
+
+    <div class="container">
+        <h3>
+            ZAYNAB
+        </h3>
+        <p id="ff1"> NO MORE AESTHETIC SNAPS :- khi walay jal jatay </p>
+
+    </div>
+
+    <div class="container">
+        <h3>
+            This is my heading 
+        </h3>
+        <p id="ff2"> Lorem hehehe what are you doin fufez ? </p>
+
+    </div>
+
+    <div class="container">
+        <h3>
+            This is my heading 
+        </h3>
+        <p id="ff3"> Lorem hehehe what are you doin fufez ? </p>
+
+    </div>
+
+
+
+    <!-- margin  -->
+    <!-- border ke baher wali space  -->
+    <!--  34px for eeg to charo taraf se margin ajati and so is the case with padding  -->
+    <!-- check container for margin from all sides  -->
+
+
+
+
+    <!-- allignment in a html page -lec 21  -->
+    <div class="cont">
+        <h1> Welcome to my store </h1>
+        <div id="fruits" class="item">
+            <h3> Fruits </h3>
+            <p id="fruitpara" class="para">heheh this is some next level shit ehhhhhhhhhhhhhhhhhhhhe</p>
+
+        </div>
+
+        <div id="computer" class="item">
+            <h3> Computer</h3>
+            <p id="fruitpara" class="para">heheh this is some next level shit  </p>
+
+        </div>
+        <div id="stationary" class="item">
+            <h3> Stationary  </h3>
+            <p id="fruitpara" class="para">heheh this is some next level shit  </p>
+
+        </div>
+    </div>
+
+
+
+    <!-- styling links and buttons  -->
+    
+    <!--  on chrome developer tools part2. -->
+   
+    
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+</html>

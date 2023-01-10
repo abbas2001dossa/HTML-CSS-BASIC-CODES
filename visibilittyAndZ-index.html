@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content=" tihs is description">
+    <meta name="keywords" content="html, css , js , web development">
+    <meta name="robots" content="INDEX,FOLLOW">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> css part-3 from lec-27 </title>
+    <style>
+
+        .box{
+            width:170px;
+            height:170px;
+            border:2px solid black;
+
+        }
+
+        #box1{
+            background-color: aqua;
+        }
+        #box2{
+            background-color: blue;
+
+            /* visibility */
+            /* default value - visible */
+            /* visibility:visible */
+
+            /* visibility: hidden; */
+            /* the box will be hidden - jobhi chez he hat jayega */
+
+            /* display: none; */
+            /* they both remove the boxes btu the difference between them is  */
+            /* display none removes the space as well where the box was kept */
+            /*  whereas the visibility hidden just hides the box but keeps the space as there  */
+
+
+
+            /* what does z-index do ? */
+            /* when a box overlaps on another one , wihch box would be displayd thats what zindex decides  */
+            /* used with position :  */
+            /* zindex would work only for position fixed , absolute , relative , sticky not for static  */
+
+
+            /*  you would use the two overlap boxes
+             and add zindex to it , therefore whos zindex would be greater that box would be displayed  */
+
+            position: relative;
+            bottom: 29px;
+            z-index: 39;
+            /* since 39 now greater than box 3 -- therefore box 2 would be displayed  */
+
+        }
+
+        #box3{
+            background-color: brown;
+            
+            /* z-index  */
+            position: relative;
+            z-index: 40;
+            top: -52px;
+            /* it overlaps over box 2 whereas box3 is shown  */
+            
+        
+        }
+
+        #box4{
+            background-color: maroon;
+
+        }
+
+    </style>
+    
+</head>
+
+
+<body>
+
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+
+</body>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content=" tihs is description">
+    <meta name="keywords" content="html, css , js , web development">
+    <meta name="robots" content="INDEX,FOLLOW">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOL HOGYA JEE</title>
+
+    <!-- to link a css file  -->
+    <link rel="stlesheet" href="one.css">
+    <!-- this is how u include external js -->
+    <script src="one.js"></script>
+
+</head>
+
+
+<body>
+    <h1> ABBAS </h1>
+    <p> This is<strong> This is strong </strong> Abbaas </p>
+    <p> lol hogya jee<em> its emphasized </em> </p>
+    <p>oho</p>
+    <p>JEE</p>
+    <p>ll</p>
+    <p>naice </p>
+    <!-- p*4 -> creates 4 p tags ! -->
+
+
+    <!-- line break -->
+    <br />
+    <p> hehheheh</p>
+
+    <!-- horizontal rule hr  -->
+    <hr>
+
+    <!-- anchor tag -->
+    <!-- important links ko agr embed krna he 
+     -->
+    <a href="https://google.com"> Go to Google </a>
+    <br /><a href="https://facebook.com"> Go to facebook bitch </a>
+
+    <!-- target="blank"-> new page  -->
+    <!-- to open it in a new tab not the same page -->
+    <a href="https://google.com" target="_blank"> Go to Google </a>
+    <a href="https://google.com" target="_blank"> Go to Google </a>
+
+    <!-- internal linking files
+     -->
+    <a href="/ehsan.txt"> Go to ehsan </a>
+
+
+    <!-- image -->
+    <img src="/fast.jpg" alt="error loading ">
+    <img src="https://source.unsplash.com/200x110/?nature,water" alt=" remote ">
+
+    <!-- tables adnd lists  -->
+
+    <!-- with ol and ul attributes -> google  -->
+    <!-- odereed lists -->
+    <ol type="1">
+        <li> ELEMEnt one </li>
+        <li> Element two </li>
+        <li> Element three </li>
+    </ol>
+    <ol type="A">
+        <li> ELEMEnt one </li>
+        <li> Element two </li>
+        <li> Element three </li>
+    </ol>
+    <ol type="a">
+        <li> ELEMEnt one </li>
+        <li> Element two </li>
+        <li> Element three </li>
+    </ol>
+    <ol type="I">
+        <li> ELEMEnt one </li>
+        <li> Element two </li>
+        <li> Element three </li>
+    </ol>
+    <ol type="i">
+        <li> ELEMEnt one </li>
+        <li> Element two </li>
+        <li> Element three </li>
+    </ol>
+
+
+    <!-- unordered listss -- disc and square --  -->
+    <ul type="square">
+        <li> this is the first elemennt </li>
+        <li> This is teh secodnd elemt </li>
+        <li> Thid is the thridd elemet </li>
+    </ul>
+
+    <br>
+
+    <!-- we can similarly also nest lists upon what we need !  -->
+
+
+
+    <!-- tables  -->
+    <!--  tr-> table row   th-> table head    td-> table body  -->
+    <h3> HTML TABLES </h3>
+    <table>
+        <thead>
+            <tr>
+                <th> NAME </th>
+                <th> EMPLYEE ID </th>
+                <th> Employee role </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> ROHAN </td>
+                <td> 24333</td>
+                <td> android developer </td>
+            </tr>
+            <tr>
+                <td> ROHAN </td>
+                <td> 24333</td>
+                <td> android developer </td>
+            </tr>
+            <tr>
+                <td> ROHAN </td>
+                <td> 24333</td>
+                <td> android developer </td>
+            </tr>
+
+        </tbody>
+    </table>
+
+
+
+
+
+    <!-- HTMLFORMS  -->
+
+
+    <h2> HTML FORMS </h2>
+
+    <!-- isme ssaara data backend.php ko jayega which would a php file in this folder .
+      -->
+    <form action="backend.php">
+
+    Name: <input type="text">
+    Address: <input type ="email">
+    Role <input type="button">
+
+    <!--  they would all be coming on one line -> to remove this add div tag or <br> -->
+    <!-- div tag means division  -->
+
+    <br>
+    <br>
+
+    </form>
+
+    Name: <input type="text">
+    <div>
+        Address: <input type ="email" name=" my email">
+         <!--name is used to view the my name tag in backend .   -->
+    </div>
+    <div>
+        Role <input type="button" value="bpx check kr jaldi ">
+    </div>
+    <div>
+        one <input type="date" name="my input "
+    </div>
+
+    <div>
+        <input type="checkbox">
+    </div>
+
+    <!-- radio buttnd used in my gender  -->
+    <div>
+        Gender : Male <input type="radio" name="myGender" value="check rko">
+        Female : <input type="radio">
+   
+    </div>
+
+   
+    <!-- type reset now also can be used dtot dsis  -->
+
+
+    <div>
+        Write about your self <textarea name="mytext" value="Enter text "></textarea> 
+    </div>
+
+    <!-- label tag  -->
+    <label for="text"> NAME</label>
+
+
+    <!-- select tag 
+     -->
+    <div>
+        <label for="car">car </label>
+            <select>
+                <option value="ind" > INDICA </option>
+                <option value="swf" slected > swift </option>
+            </select>
+        
+        
+    
+    </div>
+
+    <div>
+        <input type="submit" value="submit now ">
+    </div>
+
+
+<br> 
+<br>
+<br>
+    <!-- inline and block elemts  -->
+    <h3> INLINE AND BLOCK ELEMENTS </h3>
+    <br>
+
+    <!-- block elemet -> sari jagah leleta he width men aur agla jo element he wo uske bad ata he  -->
+    <!--  example of block element -> paragrah tag <p></p> -->
+    <!--  to remove blck property we span the paragraph  -->
+
+    <p style="border: 2px solid royalblue"> This is a paragraph </p>
+    <p> This is a paragraph </p><p> This is a paragraph </p><p> This is a paragraph </p>
+
+
+    <!-- on the other haand  -->
+    <br><br>
+    <span style="border: 2px solid royalblue"> This is a paragraph> This is a paragraph </span>
+    <span> This is a paragraph </span>
+    <span> This is a paragraph </span>
+    <span> This is a paragraph </span>
+
+    <!-- as u see with border lines as well block elemets-> poori width khajatay hen -->
+    <!--  inline elements border me bhi sirf utni space letay jitni necessary !
+     -->
+
+    
+     
+
+
+    <!-- ids and classes  -->
+    <h3> IDS AND CLASSES in HTML</h3>
+    
+    <!-- id == isko identify krlo is nam se -- yeiski identeity he  -->
+    <!-- ek nam se do log bhi nhi hosktay -->
+    <!-- one element one id  -->
+    
+    <!-- class is used in css -> where one class "redBg" for example is  mmade which has been clustered with different css properties - padding, border, font , color etc  -->
+    <!-- the "redbg" class give to each element like div in this eg ; would portray div ith properties of the css class -->
+    
+    <!-- we can give multiple classes to an element as well -->
+
+    <!-- <div id="mainBox" class="redBg"  ></div>  -> single   -->
+    <!-- <div id = "mainBox" class ="redBg blackbone "></div> -> muiltiple  -->
+    
+    <div id="mainBox" class="redBg">
+        tHIS IS MAIN BOX 
+    </div>
+
+
+    <!--  . is for class and # is for id -->
+    <!-- Emmet  ->  put as span.redBg  -->
+    <!--::OUTPUT:: <span class="redBg"></span> -->
+
+    <!-- .redBg     -> div tag as default -->
+    <!-- ::OUTPUT::<div class="redBg"></div> -->
+
+<!-- multiple  -->
+    <!-- span.myclass.myclass2.myclass3 -->
+    <!--  want it four times-> *4 ?? -->
+    <!-- span.myClass.myclass2.myclass3*4 -->
+    <!-- emmet not working over here whpoi ??  -->
+
+
+
+    <!-- html entities  -->
+    <h3> HTML ENTITITIES </h3>
+    <!-- assuming ocontainers predefined but it not yet  -->
+    <div class="container">
+        <p> This is a paragraph !</p>
+        <p> This is a                    paragraph !</p>
+        <!-- no matter how much space u give between a and paragraph anser would be same since html doesnt allow additional spaces  -->
+        <!-- so to give spaces we can use html entities  -->
+
+        <p> This is a &nbsp; paragraph !</p>
+        <!-- but we dont use this much we use css properties  -->
+        <p> This is a paragraph ! &lt;p&gt; </p>
+        
+    </div>
+
+
+
+
+    <!-- semantic tags in html  -->
+    <!--  ye tag men algaya he alag tpics e liye to its opimal for search engines wher eu seaarch and ur website ccontent comes related to whas searched  -->
+    <h3> Semantic Tags/ Elements  </h3>
+
+    <details>
+        <summary> I have key please </summary>
+        helo
+        doss
+        a=ehhe
+        okay 
+    </details>
+
+
+    <!-- ------------------ -->
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<!-- notes -->
+<!-- forward slash se bhi change krskte comments men  -->
+
+</html>

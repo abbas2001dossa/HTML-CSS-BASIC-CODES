@@ -1,0 +1,13 @@
+p{
+    color: green;
+    background-color:hotpink;
+}
+
+h3{
+    background-color: hotpink;
+}
+
+/* what is a css selector ? */
+/*  p{} -> all paragraph elements are selected  ! */
+/*  theere are four types of selectors  */
+/*  present in two.html !  */

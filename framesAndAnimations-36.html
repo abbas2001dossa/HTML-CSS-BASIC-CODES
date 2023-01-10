@@ -1,0 +1,133 @@
+<!-- animations and key frames  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .cont{
+            /* display: flex; */
+            background-color: antiquewhite;
+        }
+
+        .box{
+            background-color: grey;
+            width: 250px;
+            height: 250px;
+
+            position: relative;
+
+            /* ANIMATIONS */
+            animation-name: abbas;
+            animation-name: abbas2;
+
+            animation-duration: 2s;
+            /* a duration of one animation  */
+            
+            animation-iteration-count:3;
+            /* if written infinite-> to wo chalta he chala jayge a */
+            /* wohi animation ka rate ka kitni baar repeat hojayega   */
+            
+
+            animation-fill-mode:forwards ;
+            /* whatever the animation forward will take ,
+            it will let the properties stay . forward he rukjayega ! */
+    
+            
+            /* animation-fill-mode: alternate ; */
+            /* khatam hojayega */
+
+
+            animation-timing-function: ease-in;
+            /* with this function the animation made would ease in -
+            shro me slow hoga bad me fast  */
+            /* ease out - vice versa  */
+
+            /* animation-timing-function: ease-in-out; */
+            /* slow-fast-slow */
+
+
+            animation-delay: 3s;
+            /* would pause till 3s and then the animation would flow  */
+
+
+            /* animation-direction: reverse; */
+            /* ulta chalega  */
+
+
+            /* animation-direction: normal; */
+            /* seedha cahlega  */
+
+
+
+            /* shorthand property of animation-- can be set in one line   */
+            /* animation: animation-name animaation-duration animation-timing-function animation-delay */
+            /* animation-iteration-count animation-fill-mode ; */
+            /* eg:-    */
+            /* animation: abbas 5s ease-in 1s 12 backwards; */
+            
+
+
+        }
+
+
+        /* now we will make a position  */
+
+        /* the animation given has to be defined  */
+        /* thats the first animaation  */
+        @keyframes abbas{
+
+            from{
+                width: 200px;
+
+            }
+
+            to{
+                width: 1400px;
+            }
+
+        }
+
+        /* would work according the time - 0% time covered - 25%timem covered ettc  */
+        @keyframes abbas2 {
+
+            0%{
+                top:0px;
+                left: 0px;
+
+            }
+
+            25%{
+                top: 250px;
+                left: 0px;
+            }
+
+            75%{
+                top:250px;
+                left: 250px;
+
+            }
+
+            100%{
+                top: 0px;
+                left: 250px;
+            }
+
+            
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="cont">
+        <div class="box">
+            This is a box
+        </div>
+    </div>
+</body>
+</html>

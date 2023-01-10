@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        input {
+            display: block;
+            /* its no longer displayed in a single row infact
+            its dislayed as different blocks  */
+
+
+        }
+
+        .cont {
+            /* padding: ; */
+            margin: auto;
+            display: block;
+            width: 233px;
+
+
+
+            /* to centre any block element  */
+            /* 1- width set kro uski    2- margin auto krdo  */
+
+        }
+
+
+        /* select only sirf wo input jiska type text  */
+        /* input[type='text']{
+            padding: 23px;
+            border: 2px solid red ;
+
+        } */
+
+
+
+        /* aesa anchor ko set krna he jiska target set ho  */
+        /* a[target]{
+            font-size: 34px;
+            color: rgb(236, 26, 236);
+        }
+
+
+        a[target='_self']{
+            font-size: 18px;
+            color: blue;
+        } */
+
+
+
+        /* input[type = 'email'] */
+        /* {} */
+
+        /* input[type= 'submit']{
+            background-color: aqua;
+            border: 2px solid black;
+            border-radius: 10px;
+        } */
+
+
+        /* teesra element he jo li me usko selet krga onli  */
+        /* this will therefeore apply css for third child of ul */
+        /* li:nth-child(3){
+            color: green;
+        } */
+
+
+        /* har evenn me agr selct krna ho ya uspe chahata hen  */
+        /* li:nth-child(2n +0){
+            color: red;
+        } */
+
+
+        /* likewise :-  3n+3 - another order  */
+
+
+        /* odd child  */
+        /* li:nth-child(odd)
+        {
+            background-color: yellow;
+        } */
+
+
+
+
+        /* before and aafter -> new psuedo selectors  */
+
+
+        /* lec 33-> onwards  */
+        /* using felx box  */
+
+
+        section {
+            display: flex;
+            flex-direction: column;
+            margin: 3px 23px;
+
+            /* to cneter */
+            align-items: center;
+            /* border: 2px solid red; */
+            height: 344px;
+
+            /* daba ke beech me  */
+            justify-content: center;
+        }
+
+
+        /* to insert any content before or after the section tag 
+        we can use before and after  */
+        section::before {
+            /* content: "This is a content "; */
+
+        }
+
+        section::after {}
+
+
+
+        body {
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+            
+
+        }
+
+        .nn {
+            display: flex;
+            /* default flexbox direction is row  */
+            font-size: 20px;
+        }
+
+        li {
+            list-style: none;
+            padding: 34px 23px;
+        }
+
+        li:hover {
+            background-color: grey;
+            cursor: pointer;
+            border: 2px solid rgb(240, 238, 238);
+        }
+
+        h3 {
+            font-size: 4rem;
+            /* 4 multiply the size of the continrr  */
+        }
+
+        p {
+            text-align: center;
+        }
+
+
+        header::before{
+            content:"";
+            background: url('https://vip-go.shutterstock.com/blog/wp-content/uploads/sites/5/2020/05/shutterstock_1729030252.jpg?w=750');
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            /* to show the contenet on the background since the content overlapped and vanished if - 
+            u remeve zindex . */
+
+
+
+            /* ab is text ko esa banana he ke ussy dikha saken   */
+            /* top:0;
+            left:0; */
+
+
+
+            /*space khaa=tam hojati   */
+
+
+
+
+
+
+            opacity: 0.5;
+            /* makes the image light  */
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- part 1 ---lec 32 -->
+
+
+
+    <div class="cont">
+
+        <!-- <h1> <a href="https://google.com"> Go to google </a></h1> -->
+        <!-- google would open in same tab  -->
+
+        <!-- to make it open in different tab  -->
+        <!-- we can add target="_blank"   -->
+        <h1> <a href="https://google.com" target="_blank"> Go to google </a></h1>
+        <h1> <a href="https://google.com" target="_self"> Go to facebook </a></h1>
+
+
+
+        <form action="" class="formControl">
+            <input type="text" placeholder="Enter your name ">
+            <input type="password" placeholder="Enter your password ">
+            <input type="submit" value="submit">
+        </form>
+        <ul>
+            <li class="item" id="item1"> Item1</li>
+            <li class="item" id="item2"> Item2</li>
+            <li class="item" id="item3"> Item3</li>
+            <li class="item" id="item4"> Item4</li>
+            <li class="item" id="item5"> Item5</li>
+            <li class="item" id="item6"> Item6</li>
+            <li class="item" id="item1"> Item1</li>
+            <li class="item" id="item2"> Item2</li>
+            <li class="item" id="item3"> Item3</li>
+            <li class="item" id="item4"> Item4</li>
+            <li class="item" id="item5"> Item5</li>
+            <li class="item" id="item6"> Item6</li>
+
+        </ul>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- lec 33 -->
+    <!-- ---------------------- -->
+    <!-- before and after psudedo selectros  -->
+
+    <header>
+        <nav class="navbar">
+            <ul class="nn">
+                <li class="item"> Home </li>
+                <li class="item"> About </li>
+                <li class="item"> Services </li>
+                <li class="item"> Contact us </li>
+
+            </ul>
+        </nav>
+
+
+
+
+
+
+    </header>
+
+
+    <section>
+        <h3> Welcome to coding world </h3>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam minima tempora delectus hic suscipit esse
+            ipsa dolorem neque, totam cum ipsum? Ad a sit quaerat nesciunt ipsa ut maxime autem!</p>
+
+    </section>
+    <hr> 
+    <!-- ek line ajyyegi  -->
+
+
+
+</body>
+
+</html>

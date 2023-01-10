@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content=" tihs is description">
+    <meta name="keywords" content="html, css , js , web development">
+    <meta name="robots" content="INDEX,FOLLOW">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> FLEXBOX </title>
+    <style>
+
+        .cont{
+            height:544px;
+            width:100%;
+            border: 2px solid black;
+            background-color: antiquewhite;
+
+
+            /* to show flex box  */
+            /* container ke display ko flex krna prega  */
+            
+            /* initialize the container as a flex box  */
+            display: flex;
+            /* ab mera container bnchuka he flex container  */
+            /* aur uske andr jo bhi he flex items bnchuka he  */
+
+
+
+            /* flex properties for flex container  */
+            /* flex direction by default row */
+
+            /* flex-direction: column; */
+            /* col wisse bocks bnenga jesa bn rhay thay pehla bhi acc to code  */
+
+            /* flex-direction: row-reverse; */
+            /* boxes reverse hojayenga acc to rows  */
+
+            /* flex-direction: column-reverse; */
+            /* cols reverse hojaynga  */
+
+            flex-direction: row;
+
+
+
+            /* the flex box container is not responsive -> when we inspecct and reduce the page size the boxes
+            dont wrap in the border of the container -> infact it 
+            overflows which should not happen: thus -> */
+
+            /* no wrap- default  */
+
+            /* flex-wrap: wrap; */
+            /* its responsive now  */
+            /* wrap-reverse:- it would wrap in reverse order from box 6 to box1 reverse */
+
+
+            /* if you want to set flex direction and flex wrap both -> theres a shorthand present 
+            flex-flow: ;  */
+
+
+
+            /* flex-flow: row-reverse wrap ; */
+            /* two properties set together  */
+            /*  ashorthand -> do chz ek sath likhna  */
+
+
+            /* justify content */
+            /* justify-content: center; */
+            /* agr center krni ho chezzen ko - centrally aliign them  */
+
+
+            /* justify-content: space-between; */
+            /* corners ke beech me no space --only same kind of space btw boxes */
+
+            /* justify-content: space-evenly; */
+            /* all spaces including corner spaces wuld be equal  */
+
+            /* justify-content: space-around; */
+            /* between two boxes there would be more space as compared to the corners w
+            which would less of space  */
+
+            
+
+            /* allign items  */
+
+            /* to vertically centre your items/boxes  */
+            /* align-items: center; */
+            /*vertically cener inside  a container  */
+
+            /* align-items: flex-end; */
+            /* to put all the items / boxes inside the flex conaatiner 
+            at the bottom  */
+
+            /* align-items: flex-start; */
+            /* viceversa  */
+
+            /* align-items: stretch; */
+            /* when check responsiveness though inspect  */
+            /* makes evenly space between it when minimize as stretch thrugh inspects resposivesnes */
+
+
+            /* all container properties  */
+
+        }
+
+        .item{
+            background-color: tomato;
+            border:2px solid rgb(17, 243, 28) ;
+            margin:10px;
+            padding:3px;
+            width:200px;
+            height:200px;
+
+
+
+            /*  properties of flex item insode the flex container  */
+        }
+
+
+        /* flex properties fr an item  */
+        #item1{
+            /* order: 2; */
+            /* the greater the order would be the last last box/item it would be  */
+
+
+            /*  */
+            /* flex-grow: 3; */
+            /* the more the flex grow the more it would grow when increasing responsiveness trhough inspect  */
+            /* negatuv numbers na dena */
+
+
+            /* flex-shrink: 3; */
+            /* jisme sabse zyada number wo box sabsezyada
+            shirnk hoga while decreasing repsonsiveness */
+
+
+
+
+
+
+
+
+
+
+        }
+
+
+        #item2{
+
+            /* order: 6; */
+
+
+            /* flex-grow: 4; */
+
+        }
+
+        #item3{
+            /* order: 5; */
+
+
+           
+            /* can control its size with flex basis property */
+            /* when flex direction is set to row  flex basis will cntrol width  */
+            /* when felx direction is set to column flex basis will cntrol the height  */
+
+
+
+
+            flex-basis: 320px;
+            /* therefore it would change the third boxs width tp 320px onli */
+
+
+
+            /* flex shorthand  */
+            /*  felx grow - flew shrink -flex basis */
+            flex: 2 2 230px;
+
+
+
+            /* allign itslef to any position you want  */
+            align-self: flex-start;
+            align-self: flex-end;
+            align-self: center;
+
+
+
+
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <h1> This is a flex box tutorial</h1>
+    <div class="cont">
+        <div class="item" id="item1">First  box </div>
+        <div class="item" id="item2">Second box </div>
+        <div class="item" id="item3">Third box </div>
+        <!-- <div class="item" id="item4">Fourth box </div>
+        <div class="item" id="item5">Fifth box </div>
+        <div class="item" id="item6">Sixth box </div> -->
+    </div>
+
+</body>
